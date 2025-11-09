@@ -1,0 +1,14 @@
+{% extends "books/layout.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %} Создание автора {% endblock %}
+
+{% block body %}
+<form method='post' class='form отступ'>
+    {% csrf_token %}
+    {% comment %} {{ form }} {% endcomment %}
+    {% bootstrap_form form %}
+    <input type='submit' />
+</form>
+
+{% endblock %}

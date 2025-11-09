@@ -1,0 +1,25 @@
+{% extends "books/layout.html"%}
+{% block title %} {{book.name}} {% endblock %}
+
+{% block body %}
+<table class="table table-striped table-bordered mx-5">
+    <thaed>
+        <th>автор</th>
+        <th>название</th>
+        <th>цена</th>
+
+    </thaed>
+    <tbody>
+        <tr>
+            <td>{{book.author}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.price}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
+{% endblock %}
+
+
+

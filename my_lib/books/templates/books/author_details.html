@@ -1,0 +1,26 @@
+{% extends "books/layout.html"%}
+
+{% block title %} {{author}} {% endblock %}
+
+{% block body %}
+<table class="table table-striped table-bordered mx-5">
+    <thaed>
+        <th>ФИО</th>
+        <th>даты жизни</th>
+        <th>книги</th>
+
+    </thaed>
+    <tbody>
+        <tr>
+            <td>{{author.name}} {{author.surname}} {{author.patronimyc}}</td>
+            <td>{{author.birth_date}} - {author.death_date}}</td>
+            <td>{author.books.all}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
+{% endblock %}
+
+
+
