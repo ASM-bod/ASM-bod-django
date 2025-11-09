@@ -25,6 +25,17 @@
                 {% endfor %}
             </tbody>
         </table>
+
+        <form>
+        <input type="text" id="page" name="page" value="1">
+        <input type="submit">
+        </form>
+
+        {% comment %} {% for page in books.paginator %}
+            {{ page.number }}
+        {% endfor %}
+
+
         {% if books.has_previous %}
             <a href="?page=1">&laquo; first</a>
             <a href="?page={{ books.previous_page_number }}">previous</a>
@@ -39,7 +50,8 @@
         {% else %}
             <span>next</span>
             <span>last &raquo;</span>
-        {% endif %}
+        {% endif %} 
+        {% endcomment %}
 
     </div>
 {% endblock %}

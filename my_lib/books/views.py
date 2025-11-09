@@ -7,7 +7,7 @@ from django.views.generic import CreateView, View, ListView
 def books_list(request):
     books = Book.objects.all()
     paginator = Paginator(books , 10)
-    page_number = request.GET.get('page')
+    page_number = request.GET.get('page' , 1)
     page_ogj = paginator.get_page(page_number)
     return render(request,"books/books_list.html",{'books':books})
 
